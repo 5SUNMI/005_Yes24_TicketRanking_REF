@@ -1,0 +1,620 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="sequences_Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,6748.8" sap2010:WorkflowViewState.IdRef="sequences_Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="sequences_Main" sap:VirtualizedContainerService.HintSize="733.6,6684" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt목록1" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt목록2" />
+      <Variable x:TypeArguments="x:String" Name="str목록1">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str목록">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt기간장소1" />
+      <Variable x:TypeArguments="x:String" Name="str장소">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str기간">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str예매율">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt기간장소2" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt목록" />
+      <Variable x:TypeArguments="x:String" Name="str목록URL" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="list목록" />
+      <Variable x:TypeArguments="x:String" Name="strEmail">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="ss:SecureString" Name="strPW" />
+      <Variable x:TypeArguments="x:String" Name="str">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="strResult">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="671.2,64.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;티켓랭킹 시작..&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Export\티켓랭킹_20240408_오선미.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="671.2,64.8" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Export\Temp.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CopyFile>
+    <Assign sap:VirtualizedContainerService.HintSize="671.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[list목록]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[{"전체", "콘서트", "뮤지컬", "연극", "클래식/무용", "전시/행사", "아동/가족"}.ToList]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="config http://ticket.yes24.com/New/Rank/Ranking.aspx" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 예스24 티켓" sap:VirtualizedContainerService.HintSize="671.2,5651.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="637.6,5363.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="575.2,5275.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list목록]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="541.6,5084.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap2010:Annotation.AnnotationText="클릭 액티비티 변수" sap:VirtualizedContainerService.HintSize="479.2,152.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str목록]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[currentText.ToString]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <Assign sap2010:Annotation.AnnotationText="엑셀시트" sap:VirtualizedContainerService.HintSize="479.2,152.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str목록1]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[(currentText.ToString).Replace("/","")]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="479.2,3212.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[str목록 = &quot;전체&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="208, 592, 214, 88" CvTextArea="296, 625, 37, 21" CvTextArgument="7A" CvType="Button" DesignTimeRectangle="209, 593, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체' tag='A' href='/New/Rank/Ranking.aspx' /&gt;" FuzzySelectorArgument="&lt;webctrl class='on' tag='A' type='' aaname='전체' check:innerText='전체' /&gt;" Guid="c88a75e1-86b9-4cbf-9cf0-b2ba25a057f9" InformativeScreenshot="78ed881ecc7c3853b4ba82ddf7fe7ce2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*예스24 티켓*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;콘서트&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="422, 592, 214, 87" CvTextArea="502, 625, 55, 22" CvTextArgument="ZNE" CvType="Button" DesignTimeRectangle="423, 593, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='콘서트' href='/New/Rank/Ranking.aspx?genre=15456' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='콘서트' href='/New/Rank/Ranking.aspx?genre=15456' isleaf='1' tag='A' type='' class='' check:innerText='콘서트' /&gt;" Guid="ee33b6b9-692a-41fd-b1f8-89df0bda6b67" InformativeScreenshot="e70d354b04483f88a0a1023a189f1091.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;뮤지컬&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_3">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="637, 604, 214, 86" CvTextArea="716, 637, 53, 21" CvTextArgument="d717" CvType="Button" DesignTimeRectangle="637, 606, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='뮤지컬' href='/New/Rank/Ranking.aspx?genre=15457' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='뮤지컬' href='/New/Rank/Ranking.aspx?genre=15457' isleaf='1' tag='A' type='' class='' check:innerText='뮤지컬' /&gt;" Guid="c429c656-5016-4b22-9a85-480c0c1763a9" InformativeScreenshot="fa0e3174412818c84850828426569994.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;연극&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="851, 603, 215, 87" CvTextArea="940, 636, 37, 22" CvTextArgument="g7" CvType="Button" DesignTimeRectangle="851, 606, 215, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='연극' href='/New/Rank/Ranking.aspx?genre=15458' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='연극' href='/New/Rank/Ranking.aspx?genre=15458' isleaf='1' tag='A' type='' class='' check:innerText='연극' /&gt;" Guid="a62715ae-5945-49c4-9e56-8c09dc7ddee8" InformativeScreenshot="cf852b3829f4c90c65b8bbe06f186b63.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;클래식/무용&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_6" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="1067, 604, 213, 86" CvTextArea="1122, 636, 98, 22" CvTextArgument="C24/98" CvType="Button" DesignTimeRectangle="1066, 606, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='클래식/무용' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='클래식/무용' tag='A' type='' class='' check:innerText='클래식/무용' /&gt;" Guid="12205330-3d03-4524-87b5-7915fef8e4a1" InformativeScreenshot="84c5520dbae81820f994f1abfea31e70.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;전시/행사&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_7" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="1279, 603, 216, 88" CvTextArea="1346, 636, 81, 22" CvTextArgument="7AI/gAT" CvType="Button" DesignTimeRectangle="1280, 606, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전시/행사' href='/New/Rank/Ranking.aspx?genre=15460' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전시/행사' href='/New/Rank/Ranking.aspx?genre=15460' tag='A' type='' class='' check:innerText='전시/행사' /&gt;" Guid="631b4ef6-de0a-4f88-ad94-eafbbb862f92" InformativeScreenshot="5d237a4f075847d9cbfab132405d0b8d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str목록 = &quot;아동/가족&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_7">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,317.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute '전체'" sap:VirtualizedContainerService.HintSize="353.6,231.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_9" Result="[str목록URL]" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                                  <uix:NGetAttributeGeneric.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" CvElementArea="1494, 603, 215, 88" CvTextArea="1559, 636, 82, 22" CvTextArgument="015/714" CvType="Button" DesignTimeRectangle="1494, 606, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='아동/가족' href='/New/Rank/Ranking.aspx?genre=999' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='아동/가족' href='/New/Rank/Ranking.aspx?genre=999' tag='A' type='' class='' check:innerText='아동/가족' /&gt;" Guid="97768783-50df-44a6-93d4-b057614cc880" InformativeScreenshot="e107e02040de39d26a09093200cfbbc4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                  </uix:NGetAttributeGeneric.Target>
+                                </uix:NGetAttributeGeneric>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:IfElseIf>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479.2,130.4" sap2010:WorkflowViewState.IdRef="WriteLine_24" Text="[str목록URL.toString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479.2,130.4" sap2010:WorkflowViewState.IdRef="WriteLine_22" Text="[&quot;&gt;&gt;&gt;&gt; &quot; + str목록]" />
+                    <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="list목록 &gt;&gt; str목록" ClickType="Single" DisplayName="Click '전체'" sap:VirtualizedContainerService.HintSize="479.2,228.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" DesignTimeRectangle="209, 593, 214, 85" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='A' aaname='{0}' href='{1}' /&gt;&quot;, str목록, str목록URL)]" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='전체' type='' class='on' check:text='전체' /&gt;" Guid="bbddcce9-b53a-4827-ae05-55d3900215c3" ImageBase64="" InformativeScreenshot="85912676292fb307be8a4801f3331feb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*예스24 티켓*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NExtractData sap2010:Annotation.AnnotationText="순위 1 2 3" AppendResults="False" ContinueOnError="True" DataTable="[dt목록1]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='순위'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='제목'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='기간장소'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='예매율'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' text='&amp;gt;' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' idx='3' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="479.2,228.8" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" DesignTimeRectangle="209, 767, 1500, 843" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='rank-best' tag='DIV' /&gt;" Guid="1c615357-a425-43f4-b3f7-e783a1f04d7f" InformativeScreenshot="46bb2ebafcf8f5722fbc7e417c894519.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*예스24 티켓*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <ui:BuildDataTable DataTable="[dt기간장소1]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="479.2,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_5" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;기간&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;장소&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;예매율&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt목록1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="479.2,64.8" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow1" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="542.4,960" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="480,130.4" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[&quot;&gt;&gt;&gt;&gt; &quot; + CurrentRow1(&quot;기간장소&quot;).ToString]" />
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="480,220" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str기간]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[(CurrentRow1("기간장소").ToString).Substring(0,21)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str장소]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[(CurrentRow1("기간장소").ToString).Substring(21)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str예매율]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[CurrentRow1("예매율").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str기간, str장소, str예매율}]" DataTable="[dt기간장소1]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="480,228" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                            <ui:WriteRange AddHeaders="False" DataTable="[dt목록1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="480,156" sap2010:WorkflowViewState.IdRef="WriteRange_9" SheetName="[str목록1]" StartingCell="A2" WorkbookPath="Export\티켓랭킹_20240408_오선미.xlsx" />
+                            <ui:WriteRange AddHeaders="False" DataTable="[dt기간장소1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="480,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_10" SheetName="[str목록1]" StartingCell="C2" WorkbookPath="Export\티켓랭킹_20240408_오선미.xlsx" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479.2,220" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[str기간]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[str장소]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[str예매율]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <uix:NExtractData sap2010:Annotation.AnnotationText="순위 나머지" AppendResults="False" ContinueOnError="True" DataTable="[dt목록2]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='순위'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='제목'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='기간장소'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='예매율'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='p' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="479.2,228.8" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="08308a41-8c98-4e04-ab95-7386b79aabb6" Version="V3">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable BrowserURL="http://ticket.yes24.com/New/Rank/Ranking.aspx" DesignTimeRectangle="209, 1610, 1500, 8979" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='rank-list' tag='DIV' /&gt;" Guid="a0d3d20b-0bbe-4fe1-94f1-0aceeb87a8a4" InformativeScreenshot="c6160bea66f5472b71125d41c74b630f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <ui:BuildDataTable DataTable="[dt기간장소2]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="479.2,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;기간&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;장소&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;예매율&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt목록2]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="479.2,48" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow2" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="542.4,829.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="480,220" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str기간]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[(CurrentRow2("기간장소").ToString).Substring(0,21)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str장소]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[(CurrentRow2("기간장소").ToString).Substring(21)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[str예매율]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[CurrentRow2("예매율").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str기간, str장소, str예매율}]" DataTable="[dt기간장소2]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="480,228" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                            <ui:WriteRange AddHeaders="False" DataTable="[dt목록2]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="480,156" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="[str목록1]" StartingCell="A5" WorkbookPath="Export\티켓랭킹_20240408_오선미.xlsx" />
+                            <ui:WriteRange AddHeaders="False" DataTable="[dt기간장소2]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="480,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_12" SheetName="[str목록1]" StartingCell="C5" WorkbookPath="Export\티켓랭킹_20240408_오선미.xlsx" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAU6SURBVGhDxZnNSy5VHMeft+u91zTBEkKslOIqYWCmt7sQ3LQQVHShgYtEN+LCFwQjETfWQkUQMTHLP0BUCFFzIbRIQVRcuBGihRD4gkqSLyiZ+ut8j2ecZ/T3zMyZZ7z3Cx94PPOdc37jnLffmYBPyhTUC34W/C7YFZwJSIHfKMM1eODFPW9U6YJvBZsCI1BdcC/qQF2vTR8JfhJcCrigvIC6UCfqfjQ9F3wn+FfABeEHqBttoC1f9angDwHX6GOAttCmL6oVXAi4hh4TtIm249I3Aq5yVzwLBei5ILoMf6M8uswBxOBJcQWfEg7Qrzlh+v79kKX8x6wQ/fIibClzgfZD4NVxFbki7UmA/swLE72K0P7nEXqZFJTlP2SG6OJlhK5Fed8H1gdzgevuhMETV5//+FmQ/vsiIh/g74IIPQkGKCjKZ7JvHwp89c7tQ2mAmBwHNqavuGeb5vdCd4Gu5IYp82mQXoiH+uuz27J/CiP09bvaDwAQm+0UizmYu1GLV6LLHIr//IHoPtH/6d8+CdOpCH5ejI1ovyaIkRVWQV8WqbfFAP4yJUgfPg1QkvhtlON3fVqI3tKbhe6DGNkVG0s5d0NMwuEw1dXVPSA9PZ31G2RlZbH3JScns34GxGoRNlPae5uCggLilJuby/oNent7ldPU1dUVJSUlsX4GxGrZAGJHyBltaW9vV82bOjo6omDQfoCurq4qt6mVlRXWawNivpOnLfHc3Jxq3tT09DTrNUhJSaHr62vlNtXX18f6bUDMUkgsOIMt6P/Hx8eqeVN4K5zfoKysTDmtQjnnd0AmRciOuIu2xOr/hYWFrN9gcHBQOU3hjeDNcH4HELtM8biLtnD9/+zsjCKRCOs32NjYUG5T6+vrrNcFiF3mqdxFW7j+v7CwwHoN0tLSlNOqgYEB1u8CxC6Tbe5iTEKhENv/u7q6WL9BTU2NclpVWVnJ+l2A2C2nB67IyclRTVtVXFzM+g2mpqaU09TNzQ2lpqayfhcgdvaCLdXV1ap5UwgkMTGR9QOszpeXl8ptCmOC82vAFtrS0tKimje1s7PDeg3GxsaU06rh4WHWr4F+F+rs7FTNmzo4OGC9oKKiQr4hTlVVVew9LpFdSHsQNzQ0qOatys/Pf+Ctra2li4sL5XgozEz379FADmLtabSoqEg1b9X29jY1NTXJ/yrWibW1NXWF1+bmJlu/BnIa1V7IsI3Y399XYXjX0NAQW78GciHztJVobW1VYThraWlJ/bKqpKSErVsDuZXwtJnDlnl0dFSFwmt3d5fKy8tpYmJClZja29uTb5KrW4O7E27PJ8ylpaVyW4E8ADo9PaXFxUVqbm6W60J2drZMVu7LadV2wd12GvKU0DiRkJDAdp/Dw0Ovu89oLAmNp5TSDuS3SG441dfXs/do8CClhLST+u7ubsrLy5ObO6MsIyOD2tra5MrMaXx83FKHRx4k9ZDWsUr0hg79fmtry3FqXV5ett0vuSTmsQrk+mCrsbFRheVO8/PzfgQPYh5sQa6PFicnJ1Vo9jo/P6eOjg4/pkzgeLQIOR7uYg3ATGKnk5MTGhkZcTzk0sDV4a4h2+N1dIWenh6anZ2V+Sz29Nj3zMzMUH9/v8ywfOou0Wh/rYnrA4fPvJmvND7hOXhDeHVxffDwCNrU7jaxhMET94cPDdCW6wHrVpi+MAf78g0hBqgbbThOlfEIqyCWcj/3TqgLdcZcYR9D2ExhR+h5Ky7AvajjwcbsdQuJBbIjpHjIU5FsR5924DfKcA0eeO+SEe8KBP4HO9Oni9MnRwcAAAAASUVORK5CYII=" InformativeScreenshot="ab5cddbc061a8df67905d9113e21b78c.jpg" Selector="&lt;html app='chrome.exe' title='예스24 티켓' /&gt;" Title="예스24 티켓" Url="http://ticket.yes24.com/New/Rank/Ranking.aspx" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="gksmfzosel9@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="671.2,183.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPW]" Username="[strEmail]" />
+    <Assign sap:VirtualizedContainerService.HintSize="671.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["[티켓랭킹] {0} {1}_{2}"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="671.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.Format(str, Now.ToString("yyyy/MM/dd"), "예스24 티켓랭킹 과제 제출 ", "오선미")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="안녕하세요. &lt;br/&gt;&lt;br/&gt;&#xA;예스24 티켓랭킹 파일 송부드립니다. &lt;br/&gt;&lt;br/&gt;&#xA;감사합니다." DisplayName="Send SMTP Mail Message" Email="[strEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="671.2,218.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[strPW]" Server="smtp.gmail.com" Subject="[strResult]" To="gksmfzosell@naver.com">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">C:\Users\OH\Documents\UiPath\RPA01_티켓랭킹_오선미\Export\티켓랭킹_20240408_오선미.xlsx</InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="671.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;티켓랭킹 종료..&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
