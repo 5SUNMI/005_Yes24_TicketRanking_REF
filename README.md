@@ -6,9 +6,9 @@
     - Config.xlsx 설정
     - 브라우저(Chrome, Excel) 강제종료
     - 폴더, 파일 관리(폴더 있으면 삭제 후 생성, 파일 있으면 삭제)
-    - 예스24 티켓 > 랭킹 카테고리 가져오기 (dt_TransactionData에 저장)
+    - 예스24 티켓 - 랭킹 카테고리 가져오기 (dt_TransactionData에 저장)
         1. 랭킹 카테고리 가져오기 (Find Children )
-        2. > List에 입력
+        2. List에 입력
     - 카테고리별 엑셀파일 사전 준비 - 시트 순서대로 작성되도록
       
 2. **GET TRANSACTION DATA**
